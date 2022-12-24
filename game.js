@@ -1,3 +1,5 @@
+/* Level actors section ---------------------------------------------------------*/
+
 let simpleLevelPlan = `
 ......................
 ..#................#..
@@ -116,3 +118,16 @@ const levelChars = {
     "@": Player, "o": Coin,
     "=": Lava, "|": Lava, "v": Lava
 };
+
+/* Drawing section --------------------------------------------------------------*/
+
+function elt(name, attrs, ...children) {
+    let dom = document.createElement(name);
+    for (let attr of Object.keys(Attrs)) {
+        dom.setAttribute(Attr, attrs[attr]);
+    }
+    for (let child of children) {
+        dom.appendChild(child);
+    }
+    return dom;
+}
