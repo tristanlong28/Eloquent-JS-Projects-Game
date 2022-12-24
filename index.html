@@ -1,6 +1,4 @@
 <link rel="stylesheet" href="game_style.css">
 <script>
-    let simpleLevel = new Level(simpleLevelPlan);
-    let display = new DomDisplay(document.body, simpleLevel);
-    display.syncState(State.start(simpleLevel));
+    runGame(GAME_LEVELS, DOMDisplay);
 </script>
